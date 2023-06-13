@@ -1,28 +1,20 @@
 package tests;
 
-
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
-
+import org.testng.annotations.Test;
 import com.github.javafaker.Faker;
-
 import utilities.Driver;
 
 
-public class Test1 
+public class Test1 {
 
 
 
-{
-
-    @Before
+    @Test
     public void startup(){
         Driver.getDriver().get(utilities.Config.getValue("url"));
     }
-    
     @Test
     public void test1(){
         Driver.getDriver().findElement(By.name("q")).sendKeys("Denzel Washington" + Keys.ENTER);
