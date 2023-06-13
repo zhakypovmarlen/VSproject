@@ -7,6 +7,7 @@ import org.testng.annotations.Test;
 
 import com.github.javafaker.Faker;
 
+import utilities.Config;
 import utilities.Driver;
 
 public class Test2 {
@@ -15,7 +16,7 @@ public class Test2 {
 
     @BeforeMethod
     public void startup(){
-        Driver.getDriver().get("https://google.com");
+        Driver.getDriver().get(Config.getValue("url"));
     }
     
     @Test
